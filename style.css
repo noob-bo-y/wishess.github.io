@@ -1,0 +1,139 @@
+body{
+    background:lightgreen;
+    overflow:hidden;
+}
+.smile-box{
+    position:absolute;
+    width:400px;
+    height:400px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    animation:jump 15s linear 7s 1;
+}
+.smile{
+    width:100%;
+    height:100%;
+    border-radius:100%;
+    background:linear-gradient(to top left,yellow,#f6d23e);
+    box-shadow:0px 0px 500px rgba(0, 0, 0, 1);
+    animation:wish 7s linear 1;
+}
+.eye{
+    width:12%;
+    height:20%;
+    position:relative;
+    background:black;
+    border-radius:100%;
+    transition:2s;
+}
+.eye-ball{
+    width:30%;
+    height:20%;
+    top:60%;
+    left:45%;
+    position:absolute;
+    border-radius:100%;
+    background:white;
+    color:black;
+    font-size:60%;
+}
+#eye-1{
+    left:30%;
+    top:25%;
+}
+#eye-2{
+    left:60%;
+    top:5%;
+}
+.mouth{
+    width:50%;
+    height:20%;
+    position:relative;
+    background:black;
+    top:35%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    border-radius:0 0 100px 100px/0px 0px 90px 90px;
+    animation:smile 3s linear 9s 3;
+}
+.corner {
+    width: 5px;
+    height: 20px;
+    background: black;
+    border-radius: 100px/160px;
+    position: absolute;
+    top: -10px;
+    transform: rotate(65deg);
+    left: -5px;	
+}
+.corner.right {
+    left:100%;
+    transform: rotate(-65deg);	
+}
+.wishes{
+    bottom:50px;
+    width:100%;
+    position:absolute;
+    text-align:center;
+    font-size:1.5em;
+    animation:jump 15s linear 1;
+    font-family: cursive;
+}
+.wish{
+    position:relative;
+    text-align:center;
+    top:0px;
+    animation:down 20s linear 7s 1;
+}
+h1{	
+    font-size:3em;
+    padding:15px;
+    box-shadow:0px 0px 200px rgba(0, 0, 0, .6);
+    text-shadow:0px 0px 10px black;
+}
+h3 button{
+ color: black;
+ width: 90px;
+ height: 50px;
+ background-color: rgb(247, 239, 239);
+ border-radius: 20%;
+ cursor: pointer;
+ text-transform: uppercase;
+}
+h3 button:hover{
+    background: pink;
+}
+@keyframes smile{
+    20%{height:30%;}
+    80%{height:30%;}
+}
+@keyframes wish{
+    10%{transform:translateY(80%)rotate(30deg);}
+    20%{transform:translateY(85%)rotate(-70deg);}
+    60%{transform:translateY(120%);}
+    70%{transform:translateY(90%);}
+    100%{transform:translateY(120%);}
+}
+@keyframes jump{
+    0%{left:30%;top:100%;transform:scale(0,0);},
+    50%{transform:scale(5,5);transition:2s;}
+}
+@keyframes down{
+    30%{transform:translateY(100px);},
+    100%{transform:translateY(180px);},
+}
+
+@media only screen and (max-width: 500px) {
+.smile-box{
+    position:absolute;
+    width:200px;
+    height:200px;
+}
+h1{
+font-size:1.5em;
+}
+}
+
+
+/* author file link here */
